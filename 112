@@ -1,76 +1,33 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SAKALITOS/newframe/main/st1"))()
 local Window = Library.CreateLib("Anexus hub 1.0 ", "BloodTheme")
 
- --Main
-local Main = Window:NewTab("Main")
-
-local MainSection = Main:NewSection("hey, " .. game.Players.LocalPlayer.DisplayName)
-
- --JUGADOR  
- local JUGADOR = Window:NewTab("Tool")
-
-local JUGADOR = JUGADOR:NewSection("Dupe tool")
-
-local JUGADOR = JUGADOR:NewSection("Modded sniper")
-
-JUGADORSection:NewButton("Snow sniper", "snow shooting sniper", function()
-
-  local args = {
-                                            [1] = "ClearAllTools"
-                                        }
-                                        
-                                        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clea1rTool1s"):FireServer(unpack(args))
-                                  
-                                        local args = {
-                                            [1] = "PickingTools",
-                                            [2] = "Sniper"
-                                        }
-                                        
-                                        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
-                                        
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local initialPosition = character.HumanoidRootPart.Position
-
-
-local destination = Vector3.new(184.69374084472656, 6.31087064743042, 55.98150634765625)
-
-
-i = 1
-repeat
-
-
-character.HumanoidRootPart.CFrame = CFrame.new(destination)
-
-
-fireclickdetector(Workspace.WorkspaceCom["001_GiveTools"].FireX.ClickDetector)
-
-wait()
-
-  i = i + 1
-until i > 100
+  -- Main
+                                local Main = Window:NewTab("MENU")
+                                local MainSection = Main:NewSection("Bienvenido, " .. game.Players.LocalPlayer.DisplayName)
+                                local MainSection = Main:NewSection("Creado por JL_1638/llllll")
+                                local MainSection = Main:NewSection("SELECCION:Brookhaven 🏡RP")
 
 
 
-character.HumanoidRootPart.CFrame = CFrame.new(initialPosition)
-                                            
-                                    local Players = game:GetService("Players")
-                                    local LocalPlayer = Players.LocalPlayer
+                                
+                                MainSection:NewKeybind("ABRIR/OCULTAR SCRIPT", "", Enum.KeyCode.RightAlt, function()
+                                    Library:ToggleUI()
+                                end)
+                                
+                                --JUGADOR
+                                local JUGADOR = Window:NewTab("JUGADOR")
+                                local JUGADORSection = JUGADOR:NewSection("APARIENCIA")
+
+
+                                JUGADORSection:NewButton("REFRESCAR AVATAR", "haz que tu personaje cambie a tu personaje de plataforma", function(state)
+
+                                    local args = {
+                                        [1] = "OCA"
+                                    }
                                     
-                                    function equipAllTools()
-                                        local backpack = LocalPlayer.Backpack
-                                        local character = LocalPlayer.Character
-                                        
-                                        for _, tool in pairs(backpack:GetChildren()) do
-                                            if tool:IsA("Tool") then
-                                                tool.Parent = character
-                                            end
-                                        end
-                                    end
+                                    game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
                                     
-                                    equipAllTools()                                   
                                 end)
 
-                                        
                                       
                                  
