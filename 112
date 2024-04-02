@@ -1,0 +1,76 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SAKALITOS/newframe/main/st1"))()
+local Window = Library.CreateLib("Anexus hub 1.0 ", "BloodTheme")
+
+ --Main
+local Main = Window:NewTab("Main")
+
+local MainSection = Main:NewSection("hey, " .. game.Players.LocalPlayer.DisplayName)
+
+ --JUGADOR  
+ local JUGADOR = Window:NewTab("Tool")
+
+local JUGADOR = JUGADOR:NewSection("Dupe tool")
+
+local JUGADOR = JUGADOR:NewSection("Modded sniper")
+
+JUGADORSection:NewButton("Snow sniper", "snow shooting sniper", function()
+
+  local args = {
+                                            [1] = "ClearAllTools"
+                                        }
+                                        
+                                        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clea1rTool1s"):FireServer(unpack(args))
+                                  
+                                        local args = {
+                                            [1] = "PickingTools",
+                                            [2] = "Sniper"
+                                        }
+                                        
+                                        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
+                                        
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local initialPosition = character.HumanoidRootPart.Position
+
+
+local destination = Vector3.new(184.69374084472656, 6.31087064743042, 55.98150634765625)
+
+
+i = 1
+repeat
+
+
+character.HumanoidRootPart.CFrame = CFrame.new(destination)
+
+
+fireclickdetector(Workspace.WorkspaceCom["001_GiveTools"].FireX.ClickDetector)
+
+wait()
+
+  i = i + 1
+until i > 100
+
+
+
+character.HumanoidRootPart.CFrame = CFrame.new(initialPosition)
+                                            
+                                    local Players = game:GetService("Players")
+                                    local LocalPlayer = Players.LocalPlayer
+                                    
+                                    function equipAllTools()
+                                        local backpack = LocalPlayer.Backpack
+                                        local character = LocalPlayer.Character
+                                        
+                                        for _, tool in pairs(backpack:GetChildren()) do
+                                            if tool:IsA("Tool") then
+                                                tool.Parent = character
+                                            end
+                                        end
+                                    end
+                                    
+                                    equipAllTools()                                   
+                                end)
+
+                                        
+                                      
+                                 
