@@ -11,23 +11,11 @@ local Window = Library.CreateLib("Anexus hub 1.0 ", "BloodTheme")
                                 local Objetos = Window:NewTab("Tool")
                                 local ObjetosSection = Objetos:NewSection("Dupe tools")
 
-                                local ObjetosSection = Objetos:NewSection("modded weapons")
+                        ObjetosSection:NewTextBox("Amount", "number of duplications", function(txt)
+                                   
+                                end)
 
-                                ObjetosSection:NewButton("snow sniper", "sniper who shoots snow instead of bullets", function()
-                                  
-local args = {
-    [1] = "ClearAllTools"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clea1rTool1s"):FireServer(unpack(args))
-
-local args = {
-    [1] = "PickingTools",
-    [2] = "Sniper"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Too1l"):InvokeServer(unpack(args))
-
+                                ObjetosSection:NewButton("Dup FireX", "you know read?", function()
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local initialPosition = character.HumanoidRootPart.Position
@@ -47,27 +35,11 @@ fireclickdetector(Workspace.WorkspaceCom["001_GiveTools"].FireX.ClickDetector)
 
 wait()
 
-i = i + 1
-until i > 100
+  i = i + 1
+until i > txt
 
 
 
 character.HumanoidRootPart.CFrame = CFrame.new(initialPosition)
-    
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-
-function equipAllTools()
-local backpack = LocalPlayer.Backpack
-local character = LocalPlayer.Character
-
-for _, tool in pairs(backpack:GetChildren()) do
-    if tool:IsA("Tool") then
-        tool.Parent = character
-    end
-end
-end
-
-equipAllTools()  
                                 end)
                                 
